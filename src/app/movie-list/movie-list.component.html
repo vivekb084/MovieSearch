@@ -1,0 +1,80 @@
+<!-- <div>
+    Sort By: 
+    <select (change)="sortList()" [(ngModel)]="sortbyModel">
+        <option *ngFor="let sortOption of sortByOptions" [value]="sortOption">{{sortOption | titlecase }}</option>
+    </select>
+</div> -->
+
+<!-- <div class="filter">
+    Filter By: 
+    <select (change)="filterlist()" [(ngModel)]="genreModel">
+        <option *ngFor="let genre of GenereOptions" [value]="genre">{{genre | titlecase }}</option>
+    </select>
+</div> -->
+
+<div class="sortby">
+    Sort By: 
+    <ng-multiselect-dropdown [placeholder]="'Select SortBy '"
+    [data]="sortByOptions" [settings]="{ 
+        singleSelection: true,
+        itemsShowLimit: 10,
+        allowSearchFilter: true,
+        closeDropDownOnSelection:true
+      }" [(ngModel)]="sortbyModel"
+      (onSelect)="sortList()"
+      (onDeSelect)="sortList()"
+    ></ng-multiselect-dropdown>
+</div>
+
+
+<div class="filter">
+    Filter By: 
+    <ng-multiselect-dropdown [placeholder]="'Select Genre '"
+    [data]="GenereOptions" [settings]="{ 
+        singleSelection: false,
+        itemsShowLimit: 10,
+        allowSearchFilter: true
+      }" [(ngModel)]="genreModel"
+      (onSelect)="filterlist()"
+      (onDeSelect)="filterlist()"
+    ></ng-multiselect-dropdown>
+</div>
+
+<div class="searchbox">
+    Search By
+    <form class="searchboxform" (ngSubmit)="searchMovies()">
+        <input type="text" [(ngModel)]="search" name="search">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div *ngIf="movieList.length==0">
+    <h4>
+        No Records found
+    </h4>
+</div>
+
+<div *ngFor="let moviedata of movieList;let i = index" class="movieBox">
+    <ul>
+        <li style="margin-right: 10px;">
+            <b>{{i+1}}.</b>
+        </li>
+        <li>
+            <div>
+                <b>Name :</b> {{moviedata.name}}
+            </div>
+            <div>
+                <b>Director :</b> {{moviedata.director}}
+            </div>
+            <div>
+                <b>IMDB :</b> {{moviedata.imdb_score}}
+            </div>
+            <div>
+                <b>99Popularity : </b>{{moviedata.Popularity99}}
+            </div>
+            <div>
+                <b>Genre : </b><span *ngFor="let genere of moviedata.genre;let isLast=last" >{{genere}} {{isLast ? '' : ', '}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

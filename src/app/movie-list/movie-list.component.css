@@ -1,0 +1,29 @@
+.movieBox{
+    margin:10px 0;
+    display: block;
+    border: 1px solid black;
+}
+
+ul
+{
+  display:flex;  
+  list-style:none;
+}
+
+.searchbox{
+    display: flex;
+    margin:10px 0
+}
+
+.searchboxform{
+    margin:0 10px
+}
+
+.filter{
+    margin:10px 0;
+    width: 50%;
+}
+
+.sortby{
+    width: 50%;
+}
