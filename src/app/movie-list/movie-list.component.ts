@@ -28,7 +28,7 @@ export class MovieListComponent implements OnInit {
   }
 
    public getMoviesList(){
-    let getMoviesUrl = '/assets/JSONFiles/imdb.json'
+    let getMoviesUrl = 'http://3.137.78.213/assets/JSONFiles/imdb.json'
     this.apiservice.getData(getMoviesUrl).subscribe(
       response => {
         this.movieList=response;

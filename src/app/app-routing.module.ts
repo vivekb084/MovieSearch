@@ -14,21 +14,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 
-  // public movieList:any =[];
-
-  // constructor(public apiservice:APIService) {
-  //   this.getMoviesList();
-  //  }
-
-  //  public getMoviesList(){
-
-  //   let getMoviesUrl = 'http://localhost:4200/assets/JSONFiles/imdb.json'
-  //   this.apiservice.getData(getMoviesUrl).subscribe(
-  //     response => {
-  //       this.movieList=response.data;
-  //       console.log(this.movieList)
-  //     }
-  //   )
-  //  }
 
  }
