@@ -1,4 +1,4 @@
-****Help me continue my research by provide some funding. UPI ID - vivekb084@okicici (Within India)
+****Help me continue my research by provide some funding. UPI ID - vivekb084@okicici (Within India)****
 
 
 # GoFynd
